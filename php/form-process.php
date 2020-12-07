@@ -1,24 +1,27 @@
 <?php
 
+ini_set( 'display_errors', 1 );
+error_reporting( E_ALL );
 $errorMSG = "";
+$from = "kpzei42za9zs@sportsport.com.co";
 
 // NAME
 if (empty($_POST["name"])) {
-    $errorMSG = "Name is required ";
+    $errorMSG = "Nombre es requerido ";
 } else {
     $name = $_POST["name"];
 }
 
 // EMAIL
 if (empty($_POST["email"])) {
-    $errorMSG .= "Email is required ";
+    $errorMSG .= "Email es requerido  ";
 } else {
     $email = $_POST["email"];
 }
 
 // MESSAGE
 if (empty($_POST["message"])) {
-    $errorMSG .= "Message is required ";
+    $errorMSG .= "Mensaje es requerido ";
 } else {
     $message = $_POST["message"];
 }
@@ -41,7 +44,11 @@ $Body .= "\n";
 
 if ($errorMSG == ""){
 	// send email
-	$success = mail($EmailTo, $Subject, $Body, "From:".$email);
+    $to = "ingmiguelmora@hotmail.com";
+    $subject = "Checking PHP mail";
+    $message = "PHP mail works just fine";
+    $headers = "From:" . $from;    
+    $success = mail($EmailTo, $Subject, $Body,$headers);        
 	echo "Mensaje envíado, pronto nos pondremos en contacto";
 }else{
     if($errorMSG == ""){
