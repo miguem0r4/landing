@@ -1,11 +1,20 @@
 <?php
 
-ini_set( 'display_errors', 1 );
-error_reporting( E_ALL );
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
+// Load Composer's autoloader
+require '../vendor/autoload.php';
+
+// Instantiation and passing `true` enables exceptions
+
+
+
 $errorMSG = "";
 $from = "kpzei42za9zs@sportsport.com.co";
 
-require("PHPMailer-master/PHPMailerAutoload.php");
+
 
 // NAME
 if (empty($_POST["name"])) {
