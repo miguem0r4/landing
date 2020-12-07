@@ -58,23 +58,25 @@ if ($errorMSG == ""){
     $to = "ingmiguelmora@hotmail.com";
     $headers = "From:" . $from;       
 //    $success = $mail. mail($EmailTo, $Subject, $Body,$headers);            
-
-$mail = new PHPMailer();
-$mail->IsSMTP();
-$mail->SMTPDebug  = 3;
-$mail->From = $from;
-$mail->FromName = "Test";
-$mail->Host = "localhost"; 
-$mail->SMTPAuth = false; 
-$mail->SMTPSecure = false;
-$mail->SMTPAutoTLS = false;
-$mail->IsHTML(true);
-$mail->Subject = $Subject;
-$mail->Body = $Body;
-$exito = $mail->Send();
-
-
-	echo "Mensaje envíado, pronto nos pondremos en contacto";
+try {  
+    $mail = new PHPMailer();
+    $mail->IsSMTP();
+    $mail->SMTPDebug  = 3;
+    $mail->From = $from;
+    $mail->FromName = "Test";
+    $mail->Host = "localhost"; 
+    $mail->SMTPAuth = false; 
+    $mail->SMTPSecure = false;
+    $mail->SMTPAutoTLS = false;
+    $mail->IsHTML(true);
+    $mail->Subject = $Subject;
+    $mail->Body = $Body;
+    $exito = $mail->Send();
+    echo "Mensaje envíado, pronto nos pondremos en contacto";
+      //code...
+} catch (Exception $e) {
+    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+}
 }else{
     if($errorMSG == ""){
         echo "Ocurrio un error";
