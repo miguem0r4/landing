@@ -60,7 +60,7 @@ if ($errorMSG == ""){
 //    $success = $mail. mail($EmailTo, $Subject, $Body,$headers);            
 try {  
     $mail = new PHPMailer();
-    $mail->IsSMTP();
+    $mail->IsSMTP();-
     $mail->SMTPDebug  = 3;
     $mail->From = $from;
     $mail->FromName = "Test";
@@ -69,6 +69,7 @@ try {
     $mail->SMTPSecure = false;
     $mail->SMTPAutoTLS = false;
     $mail->IsHTML(true);
+    $mail->addAddress($to, 'Miguel Mora');
     $mail->Subject = $Subject;
     $mail->Body = $Body;
     $exito = $mail->Send();
