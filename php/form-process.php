@@ -24,30 +24,28 @@ if (empty($_POST["message"])) {
 }
 
 
-$EmailTo = "emailaddress@test.com";
-$Subject = "New Message Received";
+$EmailTo = "ingmiguelmora@hotmail.com";
+$Subject = "Nuevo mensaje de contacto";
 
 // prepare email body text
 $Body = "";
-$Body .= "Name: ";
+$Body .= "Nombre: ";
 $Body .= $name;
 $Body .= "\n";
 $Body .= "Email: ";
 $Body .= $email;
 $Body .= "\n";
-$Body .= "Message: ";
+$Body .= "Mensaje: ";
 $Body .= $message;
 $Body .= "\n";
 
-// send email
-$success = mail($EmailTo, $Subject, $Body, "From:".$email);
-
-// redirect to success page
-if ($success && $errorMSG == ""){
-   echo "success";
+if ($errorMSG == ""){
+	// send email
+	$success = mail($EmailTo, $Subject, $Body, "From:".$email);
+	echo "Mensaje envíado, pronto nos pondremos en contacto";
 }else{
     if($errorMSG == ""){
-        echo "Something went wrong :(";
+        echo "Ocurrio un error";
     } else {
         echo $errorMSG;
     }
