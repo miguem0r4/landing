@@ -12,44 +12,20 @@ require '../vendor/autoload.php';
 $errorMSG = "";
 $from = "miguel041106@gmail.com";
 
-
-
-// NAME
-if (empty($_POST["name"])) {
-    $errorMSG = "Nombre es requerido ";
-} else {
-    $name = $_POST["name"];
-}
-
 // EMAIL
-if (empty($_POST["email"])) {
+if (empty($_POST["email1"])) {
     $errorMSG .= "Email es requerido  ";
 } else {
     $email = $_POST["email"];
 }
-
-// MESSAGE
-if (empty($_POST["message"])) {
-    $errorMSG .= "Mensaje es requerido ";
-} else {
-    $message = $_POST["message"];
-}
-
 
 $EmailTo = "ingmiguelmora@hotmail.com";
 $Subject = "Nuevo mensaje de contacto";
 
 // prepare email body text
 $Body = "";
-$Body .= "Nombre: ";
-$Body .= $name;
-$Body .= "\n";
 $Body .= "Email: ";
 $Body .= $email;
-$Body .= "\n";
-$Body .= "Mensaje: ";
-$Body .= $message;
-$Body .= "\n";
 
 if ($errorMSG == ""){
 	// send email
@@ -57,9 +33,9 @@ if ($errorMSG == ""){
     $headers = "From:" . $from;       
 //    $success = $mail. mail($EmailTo, $Subject, $Body,$headers);            
 try {  
-/*    $mail = new PHPMailer();
+    $mail = new PHPMailer();
 
-    $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      // Enable verbose debug output
+    //$mail->SMTPDebug = SMTP::DEBUG_SERVER;                      // Enable verbose debug output
     $mail->isSMTP();                                            // Send using SMTP
     $mail->Host       = 'smtp.gmail.com';                    // Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
@@ -70,21 +46,6 @@ try {
     $mail->Password   = 'T41esnacionalg';                               // SMTP password
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
     $mail->Port       = 587;                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
-*/
-
-
-$mail = new PHPMailer(true);
-$mail->IsSMTP(); // Using SMTP.
-$mail->CharSet = 'utf-8';
-$mail->SMTPDebug = 2; // Enables SMTP debug information - SHOULD NOT be active on production servers!
-$mail->SMTPAuth = false; // Enables SMTP authentication.
-$mail->Host = "relay-hosting.secureserver.net"; // SMTP server host.
-
-$mail->AddReplyTo('ingmiguelmora@hotmail.com', 'Miguel');
-$mail->SetFrom('contacto@sportspot.com', 'Contacto');
-$mail->Subject = 'PHPMailer Test Subject via smtp, basic with authentication';
-$mail->AltBody = 'To view the message, please use an HTML compatible email viewer!';
-$mail->MsgHTML("Hi, this is an test email");
 
 /*
     $mail­->isSMTP();
@@ -114,7 +75,7 @@ $mail­->Password = "T41esnacionalg";
     $mail->Body = $Body;
     $exito = $mail->Send();
 
-    echo "Mensaje envíado, pronto nos pondremos en contacto";
+    echo "Pronto nos pondremos en contacto";
     echo $exito;
       //code...
 } catch (Exception $e) {

@@ -112,12 +112,27 @@
                 </a>
               </li>
               <li class="nav-item mt-2" data-aos="fade-up" data-aos-delay="200">
-                <a class="nav-link" data-toggle="tab" href="#tab-1">
+                <!--<a class="nav-link" data-toggle="tab" href="#tab-1">-->
                   <h4>Pre inscribete</h4>
-                  <form action="" method="post">
-                    <input type="email" name="email" style="margin-right: 3%;" placeholder="correo@ejemplo.com"><input type="submit" class="btn" value="Enviar">
+                  <form id="leadform" action="php/lead-form.php" method="post" role="form" class="php-email-form" >
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="email1">Tu correo</label>
+                            <input type="email" class="form-control" name="email1" id="email1" data-rule="email" data-msg="Por favor ingresa un email válido" />
+                            <div class="validate"></div>
+                            <div id="msgSubmit" class="h3 text-center hidden"></div>
+                        </div>
+                        <div id="msgSubmit" class="h3 text-center hidden"></div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="loading">Cargando</div>
+                        <div class="error-message"></div>
+                        <div class="sent-message">Pronto nos pondremos en contacto</div>
+                      </div>                    
+                    <!--<input type="email" id="email1" name="email" style="margin-right: 3%;" placeholder="correo@ejemplo.com">-->
+                    <input type="submit" class="btn" value="Enviar">                                        
                   </form>                                    
-                </a>
+                <!--</a>-->
               </li>
             </ul>            
           </div>

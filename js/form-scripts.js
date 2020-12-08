@@ -10,6 +10,35 @@ $("#contactForm").validator().on("submit", function (event) {
     }
 });
 
+$("#leadForm").validator().on("submit", function (event) {
+    if (event.isDefaultPrevented()) {
+        // handle the invalid form...
+        formError();
+        submitMSG(false, "Did you fill in the form properly?");
+    } else {
+        // everything looks good!
+        event.preventDefault();
+    var email = $("#email1").val();
+    $.ajax({
+        type: "POST",
+        url: "php/lead-form.php",
+        data: "email=" + email ,
+        success : function(text){
+            if (text == "success"){
+                //("#leadForm")[0].reset();
+                submitMSG(true, "Mensaje enviado!")
+            } else {
+                $("#leadForm").removeClass().addClass('shake animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                    $(this).removeClass();
+                });
+                submitMSG(false,text);
+            }
+        }
+    });
+    }
+    
+});
+
 
 function submitForm(){
     // Initiate Variables With Form Content
@@ -34,7 +63,7 @@ function submitForm(){
 
 function formSuccess(){
     $("#contactForm")[0].reset();
-    submitMSG(true, "Message Submitted!")
+    submitMSG(true, "Mensaje enviado!")
 }
 
 function formError(){
