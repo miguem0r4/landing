@@ -39,7 +39,7 @@ $EmailTo = "ingmiguelmora@hotmail.com";
 $Subject = "Nuevo mensaje de contacto";
 
 // prepare email body text
-$Body = "";
+$body = "";
 $logo = '../assets/img/logo.png';
 $link = '#';
 
@@ -60,7 +60,7 @@ if ($errorMSG == ""){
 	// send email
     $to = "ingmiguelmora@hotmail.com";
     $headers = "From:" . $from;       
-//    $success = $mail. mail($EmailTo, $Subject, $Body,$headers);            
+//    $success = $mail. mail($EmailTo, $Subject, $body,$headers);            
 try {  
     $mail = new PHPMailer();
     $mail->isSMTP();                                            // Send using SMTP
@@ -91,7 +91,7 @@ try {
     // Content
     $mail->isHTML(true);                                  // Set email format to HTML
     $mail->Subject = $Subject;
-    $mail->Body = $Body;
+    $mail->Body = $body;
     $exito = $mail->Send();
     echo "Mensaje envíado, pronto nos pondremos en contacto";    
 } catch (Exception $e) {
