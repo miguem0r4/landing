@@ -57,7 +57,7 @@ if ($errorMSG == ""){
 //    $success = $mail. mail($EmailTo, $Subject, $Body,$headers);            
 try {  
     $mail = new PHPMailer();
-    $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      // Enable verbose debug output    
+    //$mail->SMTPDebug = SMTP::DEBUG_SERVER;                      // Enable verbose debug output    
     $mail->isSMTP();                                            // Send using SMTP
     $mail­->SMTPSecure = "ssl";
     $mail->Username   = $from;                     // SMTP username
