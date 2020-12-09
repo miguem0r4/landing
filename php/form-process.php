@@ -57,18 +57,23 @@ if ($errorMSG == ""){
 //    $success = $mail. mail($EmailTo, $Subject, $Body,$headers);            
 try {  
     $mail = new PHPMailer();
-    $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      // Enable verbose debug output
+    $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      // Enable verbose debug output    
     $mail->isSMTP();                                            // Send using SMTP
-    $mail->Host       = 'smtp.zoho.com';                    // Set the SMTP server to send through
-    $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
+//    $mail->SMTPAuth = true;
+//    $mail->Host       = 'smtp.zoho.com';                    // Set the SMTP server to send through
+//    $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
     $mail­->SMTPSecure = "ssl";
 //    $mail->SMTPSecure = 'tls';
 
     $mail->Username   = $from;                     // SMTP username
     $mail->Password   = 'contacto2020';                               // SMTP password
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
-    $mail->Port       = 465;                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
+//    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
+//    $mail->Port       = 465;                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
 
+    $mail->Host = 'localhost';
+    $mail->SMTPAuth = false;
+    $mail->SMTPAutoTLS = false; 
+    $mail->Port = 25; 
 /*
 
 $mail = new PHPMailer(true);
@@ -101,7 +106,7 @@ $mail­->Password = "T41esnacionalg";
 
   */
     //Recipients
-    $mail->setFrom($from, 'contacto');
+    $mail->setFrom($from, 'Contacto SportSpot');
     $mail->addAddress($to, 'Miguel Mora');
     //$mail->addAddress('contacto@sportspot.com.co', 'Contacto');
     //$mail->addAddress('aumana@sportspot.com.co', 'Andres');
