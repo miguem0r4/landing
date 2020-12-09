@@ -65,8 +65,7 @@ try {
     $mail->Body = $Body;
     $exito = $mail->Send();
 
-    echo "Pronto nos pondremos en contacto";
-    echo $exito;
+    echo "Pronto nos pondremos en contacto";    
       //code...
 } catch (Exception $e) {
     echo "El mensaje no pudo ser enviado: {$mail->ErrorInfo}";
