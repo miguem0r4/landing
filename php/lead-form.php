@@ -16,7 +16,7 @@ $from = "contacto@sportspot.com.co";
 if (empty($_POST["email1"])) {
     $errorMSG .= "Email es requerido  ";
 } else {
-    $email = $_POST["email"];
+    $email = $_POST["email1"];
 }
 
 $EmailTo = "ingmiguelmora@hotmail.com";
