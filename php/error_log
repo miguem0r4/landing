@@ -1,0 +1,2 @@
+[10-Dec-2020 09:34:18 UTC] PHP Warning:  require(../vendor/autoload.php): failed to open stream: No such file or directory in /home/kpzei42za9zs/public_html/php/form-process.php on line 8
+[10-Dec-2020 09:34:18 UTC] PHP Fatal error:  require(): Failed opening required '../vendor/autoload.php' (include_path='.:/opt/alt/php72/usr/share/pear') in /home/kpzei42za9zs/public_html/php/form-process.php on line 8
