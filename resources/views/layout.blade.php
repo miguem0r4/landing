@@ -114,7 +114,7 @@
           </div>
 
           <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch" data-aos="fade-left">
-            <form id="contactForm" action= {{ url('contacto') }} role="form" class="php-email-form">
+            <form id="contactForm" method="POST" action= {{ url('contacto') }} role="form" class="php-email-form">
                 {{ csrf_field() }}
               <div class="form-row">
                 <div class="form-group col-md-6">

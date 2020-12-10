@@ -29,7 +29,7 @@
             <li class="nav-item mt-2" data-aos="fade-up" data-aos-delay="200">
               <!--<a class="nav-link" data-toggle="tab" href="#tab-1">-->
                 <h4>Pre inscribete</h4>
-                <form id="leadform" action={{ url('lead') }} method="post" role="form" class="php-email-form" >
+                <form id="leadform" action={{ url('lead') }} method="POST" role="form" class="php-email-form" >
                     {{ csrf_field() }}
                   <div class="form-row">
                       <div class="form-group col-md-6">

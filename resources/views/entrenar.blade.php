@@ -52,7 +52,7 @@
         <div class="col-lg-12 order-1">
           <!--<a class="nav-link" data-toggle="tab" href="#tab-1">-->
             <h4>Pre inscribete</h4>
-            <form id="leadform" action="php/lead-form.php" method="post" role="form" class="php-email-form" >
+            <form id="leadform" action="php/lead-form.php" method="POST" role="form" class="php-email-form" >
               <div class="form-row">
                   <div class="form-group col-md-6">
                       <label for="email1">Tu correo</label>
