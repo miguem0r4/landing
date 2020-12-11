@@ -1,5 +1,17 @@
 @extends('layout')
 
+@section('hero')
+<div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center" data-aos="fade-up">
+  <div>
+    <!--<h1>CONOCE LA NUEVA ERA DEL DEPORTE</h1>-->
+    <img src="img/La nueva era.png"1 class="img-fluid" alt="">
+  </div>
+</div>
+<div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="fade-left">
+  <img src="img/collage usuario.png"1 class="img-fluid" alt="">
+</div>    
+@endsection
+
 @section('main')
 <section id="entrenar" class="features">
     <div class="container">
@@ -52,11 +64,13 @@
         <div class="col-lg-12 order-1">
           <!--<a class="nav-link" data-toggle="tab" href="#tab-1">-->
             <h4>Pre inscribete</h4>
-            <form id="leadform" action="php/lead-form.php" method="POST" role="form" class="php-email-form" >
+            <form id="leadform" action= {{ url('lead') }} method="POST" role="form" class="php-email-form" >
+              {{ csrf_field() }}
               <div class="form-row">
                   <div class="form-group col-md-6">
                       <label for="email1">Tu correo</label>
                       <input type="email" class="form-control" name="email1" id="email1" data-rule="email" data-msg="Por favor ingresa un email válido" />
+                      <input type="hidden" name="tipo" id="tipo" value="Deportista"/>
                       <div class="validate"></div>
                       <div id="msgSubmit" class="h3 text-center hidden"></div>
                   </div>

@@ -48,7 +48,7 @@
 
       <div class="logo mr-auto">
         <!-- Uncomment below if you prefer to use an image logo -->
-        <a href="index.html"><img src="img/logo.png" alt="" class="img-fluid"></a>
+        <a href="/"><img src="img/logo.png" alt="" class="img-fluid"></a>
       </div>
 
       <nav class="nav-menu d-none d-lg-block">
@@ -61,24 +61,18 @@
     </div>
   </header><!-- End Header -->
 
-  <!-- ======= Hero Section ======= -->
-  <section id="hero">
+  
+<!-- ======= Hero Section ======= -->
+<section id="hero">
 
-    <div class="container">        
-      <div class="row">
-        <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center" data-aos="fade-up">
-          <div>
-            <!--<h1>CONOCE LA NUEVA ERA DEL DEPORTE</h1>-->
-            <img src="img/La nueva era.png"1 class="img-fluid" alt="">
-          </div>
-        </div>
-        <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="fade-left">
-          <img src="img/collage usuario.png"1 class="img-fluid" alt="">
-        </div>
-      </div>
+  <div class="container">        
+    <div class="row">
+      @yield('hero')      
     </div>
+  </div>
 
-  </section><!-- End Hero -->
+</section><!-- End Hero -->
+
 
   <main id="main">
 
