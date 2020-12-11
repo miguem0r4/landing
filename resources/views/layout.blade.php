@@ -12,7 +12,7 @@
   <!-- Favicons -->
   <!--<link href="img/favicon.png" rel="icon">  
   <link href="img/apple-touch-icon.png" rel="apple-touch-icon">-->
-<link rel="icon" href="{!! asset('img/favicon.png') !!}" type="image/x-icon">
+<link rel="icon" href="{!! URL::asset('img/favicon.png') !!}" type="image/x-icon">
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 
 
@@ -26,16 +26,16 @@
   <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
   <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet"> -->
-  <link rel="stylesheet" href="{!! asset('vendor/bootstrap/css/bootstrap.min.css') !!}">
-  <link rel="stylesheet" href="{!! asset('vendor/icofont/icofont.min.css') !!}">
-  <link rel="stylesheet" href="{!! asset('vendor/boxicons/css/boxicons.min.css') !!}">
-  <link rel="stylesheet" href="{!! asset('vendor/venobox/venobox.css') !!}">
-  <link rel="stylesheet" href="{!! asset('vendor/owl.carousel/assets/owl.carousel.min.css') !!}">
-  <link rel="stylesheet" href="{!! asset('vendor/aos/aos.css') !!}">
+  <link rel="stylesheet" href="{!!  URL::asset('vendor/bootstrap/css/bootstrap.min.css') !!}">
+  <link rel="stylesheet" href="{!!  URL::asset('vendor/icofont/icofont.min.css') !!}">
+  <link rel="stylesheet" href="{!!  URL::asset('vendor/boxicons/css/boxicons.min.css') !!}">
+  <link rel="stylesheet" href="{!!  URL::asset('vendor/venobox/venobox.css') !!}">
+  <link rel="stylesheet" href="{!!  URL::asset('vendor/owl.carousel/assets/owl.carousel.min.css') !!}">
+  <link rel="stylesheet" href="{!!  URL::asset('vendor/aos/aos.css') !!}">
 
   <!-- Template Main CSS File 
   <link href="assets/css/style.css" rel="stylesheet"> -->
-  <link rel="stylesheet" href="{!! asset('css/style.css') !!}">
+  <link rel="stylesheet" href="{!!  URL::asset('css/style.css') !!}">
 
 
 </head>
@@ -180,16 +180,16 @@
 
   <a href="#" class="back-to-top"><i class="bx bxs-up-arrow-alt"></i></a>
 
-  <script type="text/javascript" src="{!! asset('vendor/jquery/jquery.min.js') !!}" sync></script>
-  <script type="text/javascript" src="{!! asset('vendor/jquery.easing/jquery.easing.min.js') !!}" sync></script>
-  <script type="text/javascript" src="{!! asset('vendor/owl.carousel/owl.carousel.min.js') !!}" sync></script>
+  <script type="text/javascript" src="{!!  URL::asset('vendor/jquery/jquery.min.js') !!}" sync></script>
+  <script type="text/javascript" src="{!!  URL::asset('vendor/jquery.easing/jquery.easing.min.js') !!}" sync></script>
+  <script type="text/javascript" src="{!!  URL::asset('vendor/owl.carousel/owl.carousel.min.js') !!}" sync></script>
 
-  <script type="text/javascript" src="{!! asset('vendor/bootstrap/js/bootstrap.bundle.min.js') !!}" async></script>
-  <script type="text/javascript" src="{!! asset('vendor/php-email-form/validate.js') !!}" async></script>
-  <script type="text/javascript" src="{!! asset('vendor/isotope-layout/isotope.pkgd.min.js') !!}" async></script>
-  <script type="text/javascript" src="{!! asset('vendor/venobox/venobox.min.js') !!}" async></script>  
-  <script type="text/javascript" src="{!! asset('vendor/aos/aos.js') !!}" async></script>
-  <script type="text/javascript" src="{!! asset('js/main.js') !!}" async></script>
+  <script type="text/javascript" src="{!!  URL::asset('vendor/bootstrap/js/bootstrap.bundle.min.js') !!}" async></script>
+  <script type="text/javascript" src="{!!  URL::asset('vendor/php-email-form/validate.js') !!}" async></script>
+  <script type="text/javascript" src="{!!  URL::asset('vendor/isotope-layout/isotope.pkgd.min.js') !!}" async></script>
+  <script type="text/javascript" src="{!!  URL::asset('vendor/venobox/venobox.min.js') !!}" async></script>  
+  <script type="text/javascript" src="{!!  URL::asset('vendor/aos/aos.js') !!}" async></script>
+  <script type="text/javascript" src="{!!  URL::asset('js/main.js') !!}" async></script>
 
 </body>
 
