@@ -27,5 +27,5 @@ Route::get('/tyc', function () {
     return view('tyc');
 });
 
-Route::post('/contacto', 'contactoController@crear');
-Route::post('/lead', 'contactoController@capturarLead');
+Route::post('/contacto', 'ContactoController@store');
+Route::post('/lead', 'LeadController@store');

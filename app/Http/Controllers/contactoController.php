@@ -42,14 +42,13 @@ class contactoController extends Controller
 
         // Ruta o nombre de la plantilla de hoja que se va a representar
         $template_path = 'email_template';
-        
+        if (App::environment('local')){
         Mail::send(['html'=> $template_path ], $data , function($message) {
                     // Configure el destinatario y el asunto del correo.
                     $message->to('ingmiguelmora@hotmail.com', 'Miguel Mora')->subject("Nuevo Lead recibido");
                     $message->from('contacto@sportspot.com.co','Contacto SportSpot');
                 });                
-
-        return "Mensaje envíado, pronto nos pondremos en contacto";
+        }
         return "Pronto nos pondremos en contacto";
     }
 
